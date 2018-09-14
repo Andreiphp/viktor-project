@@ -8,16 +8,15 @@
 
 class CommentModels
 {
-    static function insertICommit($name, $discription, $job, $phone, $image_user)
+    static function insertICommit($name, $discription, $phone, $image_user)
     {
         $db = Db::getConnection();
-        $sql = "INSERT INTO comments (user_name,discription,img,job,phone) VALUES
- (:user_name,:discription,:img,:job,:phone)";
+        $sql = "INSERT INTO comments (user_name,discription,img,phone) VALUES
+ (:user_name,:discription,:img,:phone)";
         $result = $db->prepare($sql);
         $result->bindParam(':user_name', $name, PDO::PARAM_STR);
         $result->bindParam(':discription', $discription, PDO::PARAM_STR);
         $result->bindParam(':img', $image_user, PDO::PARAM_STR);
-        $result->bindParam(':job', $job, PDO::PARAM_STR);
         $result->bindParam(':phone', $phone, PDO::PARAM_INT);
         return $result->execute();
     }

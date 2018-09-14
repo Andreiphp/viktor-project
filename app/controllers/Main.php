@@ -15,6 +15,8 @@ class Main
 
     public function index()
     {
+        $meta_key = 'Ремонт квартир в Минске, ремонт дома, строительные работы, ремонт квартир, ремонт под ключ';
+        $meta_desc = 'Ремонт квартир в Минске под ключ. Заказать ремонт квартиры, коттеджа или санузла.';
         $comments = CommentModels::getComments(0);
         $what_we_do = Projects::what_weDO();
         require_once(ROOT . '\templates\index.php');

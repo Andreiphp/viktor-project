@@ -18,9 +18,9 @@ class Portfolio {
         this.countCottages = 0;
         this.countBathroom = 0;
         this.countfacades = 0;
-       if(this.mainBlock){
-           this.loadProjects();
-       }
+        if (this.mainBlock) {
+            this.loadProjects();
+        }
 
     }
 
@@ -75,12 +75,12 @@ class Portfolio {
         let self = this;
         this.btnLoad.addEventListener('click', function (event) {
             let contentBlock = event.target.getAttribute('data-load') + '_content';
-            let countElements = document.getElementById(contentBlock).childElementCount;
+            //let countElements = document.getElementById(contentBlock).childElementCount;
             switch (contentBlock) {
                 case 'flat_content':
                     self.countFlat += 6;
                     self.setParam(self.countFlat, 1, contentBlock);
-                    self.checkProjects(countElements, contentBlock, 1);
+                    self.checkProjects(self.countFlat, contentBlock, 1);
                     break;
                 case 'balcony_content':
                     self.countBalcony += 6;
@@ -102,7 +102,7 @@ class Portfolio {
                     break;
                 case 'facades_content':
                     self.countfacades += 6;
-                    self.setParam( self.countfacades, 5, contentBlock);
+                    self.setParam(self.countfacades, 5, contentBlock);
                     self.checkProjects(countElements, contentBlock, 5);
                     break;
 
@@ -115,14 +115,15 @@ class Portfolio {
 
         let param = 'cat=' + cat;
         postRequest('/check/projects/', param).then(result => {
-            if (countElements === Number(result)) {
-                this.btnLoad.style.backgroundColor = '#000';
-                this.btnLoad.style.color = '#fff';
-                this.btnLoad.disabled = true;
+
+            if (countElements + 1 >= Number(result)) {
+                // this.btnLoad.style.backgroundColor = '#000';
+                // this.btnLoad.style.color = '#fff';
+                this.btnLoad.hidden = true;
             } else {
-                this.btnLoad.disabled = false;
-                this.btnLoad.style.color = '#ffc000';
-                this.btnLoad.style.backgroundColor = '#fff';
+                this.btnLoad.hidden = false;
+                // this.btnLoad.style.color = '#ffc000';
+                // this.btnLoad.style.backgroundColor = '#fff';
             }
         });
     }
@@ -130,7 +131,7 @@ class Portfolio {
     setParam(countPage, cat, contentBlock) {
 
         let param = 'start=' + countPage + '&cat=' + cat;
-
+        console.log(countPage);
         this.getFirstProjects(param, contentBlock);
     }
 
@@ -154,7 +155,26 @@ function postRequest(url, params) {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
         xhr.open('POST', url, true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.onload = function () {
+            if (this.status === 200) {
+                resolve(this.response);
+            } else {
+                let error = new Error(this.statusText);
+                error.code = this.status;
+                reject(error);
+            }
+        };
+        xhr.onerror = function () {
+            reject(new Error("Error"));
+        };
+        xhr.send(params);
+    });
+}
+function postRequest1(url, params) {
+    return new Promise(function (resolve, reject) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
         xhr.onload = function () {
             if (this.status === 200) {
                 resolve(this.response);

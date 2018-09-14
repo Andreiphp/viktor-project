@@ -12,7 +12,7 @@ class ServicesModel
     static function getLastProjects()
     {
         $db = Db::getConnection();
-        $result = $db->query("SELECT * FROM progects  ORDER BY id ASC LIMIT 4");
+        $result = $db->query("SELECT * FROM progects  ORDER BY id ASC LIMIT 3");
         $projects = array();
         $i = 0;
         while ($row = $result->fetch()) {

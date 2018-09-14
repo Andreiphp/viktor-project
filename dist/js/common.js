@@ -46,11 +46,10 @@ $(function () {
     });
 
     $('.responsive2').slick({
-        speed: 300,
+        infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '10px',
+
         responsive: [
             {
                 breakpoint: 992,
@@ -58,7 +57,7 @@ $(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+
                 }
             },
             {

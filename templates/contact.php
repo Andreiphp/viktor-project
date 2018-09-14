@@ -3,7 +3,6 @@
     <div class="container">
         <ul class="cramps_list">
             <li><a href="/" title="главная">Главная</a></li>
-            <li class=""><a class="active" href="" title="о нас">Контакты</a></li>
         </ul>
     </div>
 </div>

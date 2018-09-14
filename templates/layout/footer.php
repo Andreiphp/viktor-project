@@ -36,9 +36,9 @@
                     <li>
                         <a href="portfolio/" title="страница проекты">Проекты</a>
                     </li>
-<!--                    <li>-->
-<!--                        <a href="" title="страница вопросы">Faq`s</a>-->
-<!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="" title="страница вопросы">Faq`s</a>-->
+                    <!--                    </li>-->
                     <li>
                         <a href="contacts/" title="страница контакты">Контакты</a>
                     </li>
@@ -57,55 +57,46 @@
                 <div class="ft_last_project flex">
                     <div class="project_img_footer">
                         <a href="#">
-                            <img src="img/progect_1.jpg" alt="проект" title="перейти в проект">
+                            <img src="../../dist/img/progect_1.jpg" alt="проект" title="перейти в проект">
                         </a>
                     </div>
                     <div class="project_img_footer">
                         <a href="#">
-                            <img src="img/progect_1.jpg" alt="проект" title="перейти в проект">
+                            <img src="../../dist/img/progect_1.jpg" alt="проект" title="перейти в проект">
                         </a>
                     </div>
                     <div class="project_img_footer">
                         <a href="#">
-                            <img src="img/progect_1.jpg" alt="проект" title="перейти в проект">
+                            <img src="../../dist/img/progect_1.jpg" alt="проект" title="перейти в проект">
                         </a>
                     </div>
                     <div class="project_img_footer">
                         <a href="#">
-                            <img src="img/progect_2.jpg" alt="проект" title="перейти в проект">
+                            <img src="../../dist/img/progect_2.jpg" alt="проект" title="перейти в проект">
                         </a>
                     </div>
                     <div class="project_img_footer">
                         <a href="#">
-                            <img src="img/progect_2.jpg" alt="проект" title="перейти в проект">
+                            <img src="../../dist/img/progect_2.jpg" alt="проект" title="перейти в проект">
                         </a>
                     </div>
                     <div class="project_img_footer">
                         <a href="#">
-                            <img src="img/progect_2.jpg" alt="проект" title="перейти в проект">
+                            <img src="../../dist/img/progect_2.jpg" alt="проект" title="перейти в проект">
                         </a>
                     </div>
-                    <div class="project_img_footer">
-                        <a href="#">
-                            <img src="img/progect_2.jpg" alt="проект" title="перейти в проект">
-                        </a>
-                    </div>
-                    <div class="project_img_footer">
-                        <a href="#">
-                            <img src="img/progect_2.jpg" alt="проект" title="перейти в проект">
-                        </a>
-                    </div>
-                    <div class="project_img_footer">
-                        <a href="#">
-                            <img src="img/progect_2.jpg" alt="проект" title="перейти в проект">
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="copyright-text">
+            © 2018
+            <a href="/">vud.by</a>
+        </div>
+    </div>
 </div>
 
 <!--<script defer src="/dist/js/scripts.min.js"></script>-->

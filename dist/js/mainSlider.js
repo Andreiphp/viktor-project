@@ -4,7 +4,7 @@ class Slide {
         this.projectBox = document.querySelector('.our_progect_content');
         this.catBox = document.getElementById('slider_cat');
         this.content = [];
-        this.elSplice = 6;
+        this.elSplice = 3;
         this.btn_slider = document.getElementById('btn_slider');
 
         if (this.catBox) {
@@ -15,9 +15,6 @@ class Slide {
             this.getAllProgects('main/slide');
         }
 
-        // window.onresize = function () {
-        //     console.log('resize');
-        // }
     }
 
     getCategorProjects() {
@@ -52,17 +49,23 @@ class Slide {
     getAllProgects(param) {
         this.postRequest(param).then((result) => {
             let projects = JSON.parse(result);
-            return projects;
+                return projects;
         }).then(result => {
-            let arr = [];
-            for (let i = 0; i < result.length; i++) {
-                arr.push("<div class='progect_box_wrapper'><div class='progect_box'><img alt='проект " + result[i]['title'] + "' src='../dist/img/projects/" + result[i]['img'] + "'>" +
-                    "<div class='project_box_hover'><span class='our_project_title'><a href='/portfolio/projects/" + result[i]['id'] + "' title='просмотреть проект'>" + result[i]['title'] + "</a></span></div></div></div>");
-            }
-            while (arr.length) {
-                this.content.push(arr.splice(0, this.elSplice));
-            }
+           if(result.length === 0){
+             new Error('gecnj');
+           } else {
+               let arr = [];
+               for (let i = 0; i < result.length; i++) {
+                   arr.push("<div class='progect_box_wrapper'><div class='progect_box'><img alt='Проект - название : " + result[i]['title'] + "' src='../dist/img/projects/" + result[i]['img'] + "'>" +
+                       "<div class='project_box_hover'><span class='our_project_title'><a href='/portfolio/projects/" + result[i]['id'] + "' title='просмотреть проект: " + result[i]['title'] + "'>" + result[i]['title'] + "</a></span></div></div></div>");
+               }
+               while (arr.length) {
+                   this.content.push(arr.splice(0, this.elSplice));
+               }
+           }
+
         }).then(() => {
+            this.btnDisabled(true);
             let fr = this.content[0].join(',');
             this.projectBox.innerHTML = fr;
             let Time;
@@ -77,6 +80,16 @@ class Slide {
                     cnt++;
                 }
             }, 200);
+        }).catch(error=>{
+            let span = document.createElement('span');
+            span.textContent = 'Здесь пока нет проектов';
+            span.classList.add('error_span');
+            span.style.color = 'red';
+            while (this.projectBox.firstChild){
+                this.projectBox.firstChild.remove();
+            }
+            this.projectBox.appendChild(span);
+            this.btnDisabled();
         })
     }
 
@@ -110,7 +123,28 @@ class Slide {
             }
 
             if (event.target.className === 'back') {
-                count = (count <= 0) ? self.content.length - 1 : --count;
+
+                let timeout = self.timeOut();
+                self.deleteClass();
+                setTimeout(() => {
+                    self.btnDisabled();
+                    count = (count <= 0) ? self.content.length - 1 : --count;
+
+                    let fr = self.content[count].join(',');
+                    self.projectBox.innerHTML = fr;
+                    let r = document.querySelectorAll('.progect_box');
+                    Time = setInterval(() => {
+                        if (cnt > r.length - 1) {
+                            cnt = 0;
+                            clearInterval(Time);
+                            self.btnDisabled(true);
+                        } else {
+                            r[cnt].classList.add('werty');
+                            cnt++;
+                        }
+                    }, 100);
+
+                }, timeout + 100);
             }
         })
     }
@@ -132,9 +166,7 @@ class Slide {
         let cnt = 0;
         this.btnDisabled();
         let r = document.querySelectorAll('.progect_box');
-        // for (let i = 0; i < r.length; i++) {
-        //     r[i].classList.remove('werty');
-        // }
+
         Time = setInterval(() => {
             if (cnt > r.length - 1) {
                 cnt = 0;
@@ -181,12 +213,6 @@ class Slide {
         });
     }
 
-
-    getElements(img, title) {
-        let elements = "<div class='progect_box_wrapper'><div class='progect_box'>" +
-            "<img src='/dist/img/'" + img + "></div></div>";
-        return elements;
-    }
 }
 
 let slide = new Slide();

@@ -2,14 +2,14 @@
 <div class="icon_box_section grid">
     <div class="icon_box_content">
         <div class="icon_bar"><i class="fa flaticon-home-1 "></i></div>
-        <div class="icon_title">Безупречное качество</div>
+        <h2 class="icon_title">Безупречное качество</h2>
         <div class="icon_text">90% клиентов приходит к нам по рекомендациям от бывших заказчиков.
             Поэтому мы выполняем свою работу на 100%
         </div>
     </div>
     <div class="icon_box_content">
         <div class="icon_bar"><i class="fa flaticon-fan "></i></div>
-        <div class="icon_title">поддержка 24/24</div>
+        <h2 class="icon_title">поддержка 24/24</h2>
         <div class="icon_text">
             Наш сайт доступен для Вас 24 часа в сутки.
             Напишите нам сообщение и мы в ближайшее время свяжемся с вами.
@@ -17,7 +17,7 @@
     </div>
     <div class="icon_box_content">
         <div class="icon_bar"><i class="fa flaticon-hammer "></i></div>
-        <div class="icon_title">Современный стиль</div>
+        <h2 class="icon_title">Современный стиль</h2>
         <div class="icon_text">
             Наш дизайнер будет рад помочь вам разработать уникальный стиль в соответствии с вашими требованиями и
             бюджетом.
@@ -25,7 +25,7 @@
     </div>
     <div class="icon_box_content">
         <div class="icon_bar"><i class="fa flaticon-fence"></i></div>
-        <div class="icon_title">Гарантия</div>
+        <h2 class="icon_title">Гарантия</h2>
         <div class="icon_text">
             Официальный договор и 2 года гарантии на выполненные нами работы.
         </div>
@@ -53,45 +53,48 @@
             <button class="next">&lt;</button>
             <button class="back">&gt;</button>
         </div>
-        <div class="our_progect_content"></div>
-    </div>
-</div>
-<div class="counter">
-    <div class="container">
-        <div class="cnnt">
-            <ul class="content_cnt">
-                <li class="number_count counter_pr">140</li>
-                <li class="title_count">проектов</li>
-            </ul>
-        </div>
-        <div class="cnnt">
-            <ul class="content_cnt">
-                <li class="number_count counter_cl">75</li>
-                <li class="title_count_hp">счастливых клиентов</li>
-            </ul>
-        </div>
-        <div class="cnnt">
-            <ul class="content_cnt">
-                <li class="number_count counter_pr">140</li>
-                <li class="title_count">проектов</li>
-            </ul>
-        </div>
-        <div class="cnnt">
-            <ul class="content_cnt">
-                <li class="number_count counter_cl">75</li>
-                <li class="title_count_hp">счастливых клиентов</li>
-            </ul>
-        </div>
+        <div class="our_progect_content">
 
+        </div>
     </div>
 </div>
+<!--<div class="counter">-->
+<!--    <div class="container">-->
+<!--        <div class="cnnt">-->
+<!--            <ul class="content_cnt">-->
+<!--                <li class="number_count counter_pr">140</li>-->
+<!--                <li class="title_count">проектов</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="cnnt">-->
+<!--            <ul class="content_cnt">-->
+<!--                <li class="number_count counter_cl">75</li>-->
+<!--                <li class="title_count_hp">счастливых клиентов</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="cnnt">-->
+<!--            <ul class="content_cnt">-->
+<!--                <li class="number_count counter_pr">140</li>-->
+<!--                <li class="title_count">проектов</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="cnnt">-->
+<!--            <ul class="content_cnt">-->
+<!--                <li class="number_count counter_cl">75</li>-->
+<!--                <li class="title_count_hp">счастливых клиентов</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
 <div class="what_we_do">
     <div class="container">
-        <div class="our_progect">
-            <h2 class="our_header"><span><span class="our_yellow">Что МЫ</span>делаем</span></h2>
+        <div class="our_progectw">
+            <h2 class="our_header"><span></span></h2>
         </div>
         <div class="what_we_do_box">
             <div class="we_do_left">
+                <span class="our_yellow">Добро пожаловать!</span>
                 <div class="what_we_do_text">
                     <?php echo $what_we_do[0]['text']; ?>
                 </div>
@@ -102,7 +105,7 @@
                 </div>
             </div>
             <div class="we_do_right">
-                <img src="../dist/img/<?php echo $what_we_do[0]['img']; ?>">
+                <img alt="фото о нашей работе" src="../dist/img/<?php echo $what_we_do[0]['img']; ?>">
             </div>
         </div>
     </div>
@@ -120,11 +123,56 @@
             <p>Команда профессионалов с большим опытом работы!</p>
             <p>Множество довольных клиентов!</p>
             <p>Безупречное качество работы!</p>
-            <a href="/about/" class="btn_about">Перейти</a>
+            <a title="страница 'О нас'" href="/about/" class="btn_about">Перейти</a>
         </div>
     </div>
 </div>
+<div class="collback-section">
+    <div class="outer-box">
+        <div class="container">
+            <div class="row">
+                <div class="content-flex">
+                    <div class="inner-column">
+                        <h3>
+                           Отравьте форму<br>
+                            и в течение 10 минут мы вам перезвоним
+                        </h3>
+                        <div class="text">
+                          Все поля являются обязательными для заполнения*
+                        </div>
+                    </div>
+                    <div class="inner-form">
+                        <div class="inner-column-f">
+                            <div class="appointment-form">
+                                <h3>Заказать Обратный Звонок</h3>
+                                <form method="post">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Ваше Имя" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Введите почту" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" placeholder="Введите телефон" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea  placeholder="Сообщение" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn-coll">
+                                            Отправить сейчас
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</div>
 <div class="reviews">
     <div class="container">
         <h2 class="header_title">
@@ -134,32 +182,30 @@
             </span>
         </h2>
         <div id="comments" class="comments responsive2">
-            <?php foreach ($comments as $comment){?>
+            <?php foreach ($comments as $comment) { ?>
+                <div class="comments_list">
+                    <div class="reviews_content">
+                        <div class="avatar_box">
+                            <img class="avarat_img" src="/dist/img/comments/<?php echo $comment['img'] ?>"
+                                 title="аватар автора" alt="фото автора комментария">
+                        </div>
+                        <div class="reviews_text">
+
+                            <?php echo $comment['discription']; ?>
+                        </div>
+                        <div class="info">
 
 
-            <div class="comments_list">
-                <div class="reviews_content">
-                    <div class="avatar_box">
-                        <img class="avarat_img" src="/dist/img/comments/<?php echo $comment['img']?>" title="аватар автора" alt="фото автора">
-                    </div>
-                    <div class="reviews_text">
-                        <blockquote>
-                            <p>
-                                <?php echo $comment['discription']?>
-                            </p>
-                            <cite>
-                                <strong><?php echo $comment['date']?></strong>
-                                <strong><?php echo $comment['user_name']?></strong>
-                                <?php echo $comment['job']?>
-                            </cite>
-                        </blockquote>
+                            <strong class="info-date"><?php echo $comment['date'] ?></strong>
+                            <strong class="info-name"><?php echo $comment['user_name'] ?></strong>
+                            <?php echo $comment['job'] ?>
+
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php }?>
-
+            <?php } ?>
         </div>
-
     </div>
 </div>
 <script>

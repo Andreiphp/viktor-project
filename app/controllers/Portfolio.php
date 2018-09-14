@@ -10,6 +10,8 @@ class Portfolio
 
     public function index()
     {
+        $meta_key = 'наши работы, фото работ, фото наших работ,портфолио';
+        $meta_desc = 'Ваш Уютный Дом - реальные проекты выполненные нами, фото проектов';
         $about = AboutModel::getContent();
         require_once(ROOT . '\templates\portfolio.php');
     }

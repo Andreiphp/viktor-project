@@ -103,7 +103,7 @@ class Admin
             require 'Error.php';
             $error = new Error();
         }
-        $name = $_POST['name'];
+        $name = htmlspecialchars(strip_tags($_POST['name']));
         $discript = $_POST['txt'];
         $image = $_FILES['image']['name'];
         $cat = $_POST['cat'];
@@ -215,8 +215,14 @@ class Admin
     public function editServices()
     {
 
-        $services = ServicesModel::redactServices();
-        require_once(ROOT . '\templates\admin\redactServices.php');
+        if($this->checkAdmin()){
+            $services = ServicesModel::redactServices();
+            require_once(ROOT . '\templates\admin\redactServices.php');
+        }else{
+            require 'Error.php';
+            $error = new Error();
+        }
+
     }
 
     public function save_services()
