@@ -4279,7 +4279,8 @@ body {
     color: #fefefe;
     /*font-family: "Montserrat", sans-serif;*/
     font-family: 'Raleway', sans-serif;
-    background-color: #fefefe;
+    background-color: #022a50;
+    font-size: 55px;
 }
 
 .loaded {
