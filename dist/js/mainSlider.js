@@ -6,7 +6,7 @@ class Slide {
         this.content = [];
         this.elSplice = 3;
         this.btn_slider = document.getElementById('btn_slider');
-
+        this.g = false;
         if (this.catBox) {
             this.getCategorProjects();
         }
@@ -49,24 +49,31 @@ class Slide {
     getAllProgects(param) {
         this.postRequest(param).then((result) => {
             let projects = JSON.parse(result);
-                return projects;
+            return projects;
         }).then(result => {
-           if(result.length === 0){
-             new Error('gecnj');
-           } else {
-               let arr = [];
-               for (let i = 0; i < result.length; i++) {
-                   arr.push("<div class='progect_box_wrapper'><div class='progect_box'><img alt='Проект - название : " + result[i]['title'] + "' src='../dist/img/projects/" + result[i]['img'] + "'>" +
-                       "<div class='project_box_hover'><span class='our_project_title'><a href='/portfolio/projects/" + result[i]['id'] + "' title='просмотреть проект: " + result[i]['title'] + "'>" + result[i]['title'] + "</a></span></div></div></div>");
-               }
-               while (arr.length) {
-                   this.content.push(arr.splice(0, this.elSplice));
-               }
-           }
+            if (result.length === 0) {
+                new Error('gecnj');
+            } else {
+                let arr = [];
+                for (let i = 0; i < result.length; i++) {
+                    arr.push("<div class='progect_box_wrapper'>" +
+                        "<div class='progect_box'>" +
+                        "<img alt='Проект - название : " + result[i]['title'] + "' src='../dist/img/projects/" + result[i]['img'] + "'>" +
+                        "<div class='project_box_hover'>" +
+                        "<span class='our_project_title'>" +
+                        "<a href='/portfolio/projects/" + result[i]['id'] + "' title='просмотреть проект: " + result[i]['title'] + "'>" + result[i]['title'] + "</a></span>" +
+                        "</div></div></div>");
+                }
+
+                while (arr.length) {
+                    this.content.push(arr.splice(0, this.elSplice));
+                }
+            }
 
         }).then(() => {
             this.btnDisabled(true);
-            let fr = this.content[0].join(',');
+            let fr = this.content[0].join(',').replace(/,/g, '');
+            console.log(fr);
             this.projectBox.innerHTML = fr;
             let Time;
             let cnt = 0;
@@ -80,12 +87,12 @@ class Slide {
                     cnt++;
                 }
             }, 200);
-        }).catch(error=>{
+        }).catch(error => {
             let span = document.createElement('span');
             span.textContent = 'Здесь пока нет проектов';
             span.classList.add('error_span');
             span.style.color = 'red';
-            while (this.projectBox.firstChild){
+            while (this.projectBox.firstChild) {
                 this.projectBox.firstChild.remove();
             }
             this.projectBox.appendChild(span);
@@ -105,7 +112,7 @@ class Slide {
                 setTimeout(() => {
                     self.btnDisabled();
                     count = (count >= self.content.length - 1) ? 0 : ++count;
-                    let fr = self.content[count].join(',');
+                    let fr = self.content[count].join(',').replace(/,/g, '');
                     self.projectBox.innerHTML = fr;
                     let r = document.querySelectorAll('.progect_box');
                     Time = setInterval(() => {
@@ -130,7 +137,8 @@ class Slide {
                     self.btnDisabled();
                     count = (count <= 0) ? self.content.length - 1 : --count;
 
-                    let fr = self.content[count].join(',');
+                    let fr = self.content[count].join(',').replace(/,/g, '');
+                    ;
                     self.projectBox.innerHTML = fr;
                     let r = document.querySelectorAll('.progect_box');
                     Time = setInterval(() => {

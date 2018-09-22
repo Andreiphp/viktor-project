@@ -93,7 +93,7 @@
 <div class="footer-bottom">
     <div class="container">
         <div class="copyright-text">
-            © 2018
+            © 2016
             <a href="/">vud.by</a>
         </div>
     </div>
@@ -107,15 +107,17 @@
 <script defer src="/dist/js/counter.js"></script>
 <script defer src="/dist/js/tabs.js"></script>
 <script defer src="/dist/js/portfolio.js"></script>
+<script defer src="/dist/js/md5.js"></script>
 <script defer src="/dist/js/comment.js"></script>
 <script defer src="/libs/fotorama/fotorama.js"></script>
 <script defer src="/dist/js/mail.js"></script>
 <script defer src="/dist/js/animateHeader.js"></script>
+<script defer src="/dist/js/menuLinks.js"></script>
 
-<script defer>
-    new WOW({
-        mobile: false,
-    }).init();
-</script>
+<!--<script defer>-->
+<!--    new WOW({-->
+<!--        mobile: false,-->
+<!--    }).init();-->
+<!--</script>-->
 </body>
 </html>

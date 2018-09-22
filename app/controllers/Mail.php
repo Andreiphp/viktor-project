@@ -15,10 +15,10 @@ class Mail
         require_once(ROOT . '/libs/mailer/PHPMailerAutoload.php');
         $mail = new PHPMailer;
         $mail->CharSet = 'utf-8';
-        $name = $_POST['name'];
-        $phone = $_POST['phone'];
-        $email = $_POST['mail'];
-        $discription = $_POST['discription'];
+        $name = htmlspecialchars(strip_tags($_POST['name']));
+        $phone = htmlspecialchars(strip_tags($_POST['phone']));
+        $email = htmlspecialchars(strip_tags($_POST['mail']));
+        $discription = htmlspecialchars(strip_tags($_POST['discription']));
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 

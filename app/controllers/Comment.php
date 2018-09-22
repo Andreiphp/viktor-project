@@ -28,11 +28,12 @@ class Comment
         if (empty($image_user)) {
             $image_user = 'no-image.png';
         } else {
-            if (is_uploaded_file($_FILES["image_user"]["tmp_name"])) {
-                move_uploaded_file($_FILES["image_user"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/dist/img/comments/$image_user");
+            if (is_uploaded_file($_FILES["file"]["tmp_name"])) {
+                move_uploaded_file($_FILES["file"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/dist/img/comments/$image_user");
             }
         }
-
+        print_r($_FILES);
+        print_r($_POST);
 
         CommentModels::insertICommit($name, $discription, $phone, $image_user);
         //header("location:" . $_SERVER['HTTP_REFERER']);
@@ -45,5 +46,12 @@ class Comment
         $comments = CommentModels::getComments($start);
         echo json_encode($comments);
 
+    }
+
+    public function checkComment()
+    {
+
+        $count = CommentModels::checkComment();
+        echo $count;
     }
 }

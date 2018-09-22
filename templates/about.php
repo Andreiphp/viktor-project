@@ -202,18 +202,26 @@
                                 <div class="inner-column-f">
                                     <div class="appointment-form">
                                         <h3>Заказать Обратный Звонок</h3>
-                                        <form method="post">
+                                        <form name="sendMail" action="send_mail/" method="post">
                                             <div class="form-group">
-                                                <input type="text" placeholder="Ваше Имя" required>
+                                                <input class="input_text" id="before_name" required type="text" name="name"
+                                                       title="Только русские буквы" placeholder="Ваше имя*"
+                                                       pattern="^[а-яА-Я]+\s*[а-яА-Я]*$">
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" placeholder="Введите почту" required>
+                                                <input id="before_mail" required class="input_text" type="email" name="mail"
+                                                       placeholder="Почта*">
                                             </div>
                                             <div class="form-group">
-                                                <input type="tel" placeholder="Введите телефон" required>
+                                                <input id="before_phone" class="input_text " type="tel" minlength="7"
+                                                       name="phone"
+                                                       title="шаблон ввода 80298749315 БЕЗ пробелов" required
+                                                       pattern="^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$"
+                                                       placeholder="Введите телефон">
                                             </div>
                                             <div class="form-group">
-                                                <textarea placeholder="Сообщение" required></textarea>
+                                              <textarea placeholder="Напишите нам" required minlength="30" maxlength="200"
+                                                        name="discription"></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <button class="btn-coll">

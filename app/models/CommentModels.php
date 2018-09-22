@@ -8,11 +8,18 @@
 
 class CommentModels
 {
+
+
+    static function checkComment(){
+        $db = Db::getConnection();
+        $count = $db->query("SELECT COUNT(*) as id FROM comments WHERE status = 'ок' ")->fetchColumn();
+        return $count;
+    }
     static function insertICommit($name, $discription, $phone, $image_user)
     {
         $db = Db::getConnection();
-        $sql = "INSERT INTO comments (user_name,discription,img,phone) VALUES
- (:user_name,:discription,:img,:phone)";
+        $sql = "INSERT INTO comments (user_name, discription, img, phone) VALUES
+ (:user_name, :discription, :img, :phone)";
         $result = $db->prepare($sql);
         $result->bindParam(':user_name', $name, PDO::PARAM_STR);
         $result->bindParam(':discription', $discription, PDO::PARAM_STR);

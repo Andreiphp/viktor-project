@@ -1,28 +1,28 @@
 (function() {
   'use strict';
 
-  var tabs = function(options) {
-    var el = document.querySelector(options.el);
-    var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
-    var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
-    var activeIndex = 0;
-    var initCalled = false;
+  let tabs = function(options) {
+    let el = document.querySelector(options.el);
+    let tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
+    let tabContentContainers = el.querySelectorAll(options.tabContentContainers);
+    let activeIndex = 0;
+    let initCalled = false;
 
 
-    var init = function() {
+    let init = function() {
       if (!initCalled) {
         initCalled = true;
         el.classList.remove('no-js');
         
-        for (var i = 0; i < tabNavigationLinks.length; i++) {
-          var link = tabNavigationLinks[i];
+        for (let i = 0; i < tabNavigationLinks.length; i++) {
+          let link = tabNavigationLinks[i];
           handleClick(link, i);
         }
       }
     };
 
 
-    var handleClick = function(link, index) {
+    let handleClick = function(link, index) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         goToTab(index);
@@ -30,7 +30,7 @@
     };
 
 
-    var goToTab = function(index) {
+    let goToTab = function(index) {
       if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
         tabNavigationLinks[activeIndex].classList.remove('is_active');
         tabNavigationLinks[index].classList.add('is_active');

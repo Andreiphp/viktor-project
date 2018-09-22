@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-lower">
+        <div id="fixed_header" class="header-lower">
             <div class="container">
                 <div class="main-box">
                     <div class="logo-box">

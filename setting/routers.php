@@ -11,6 +11,7 @@ return array(
     'comment' => ['Comment', 'index'],
     'create/commit' => ['Comment', 'postCommit'],
     'comment/get_comments' => ['Comment', 'get_comments'],
+    'comments/checkComment' => ['Comment', 'checkComment'],
     'contacts' => ['Contact', 'index'],
     'admin' => ['Admin', 'index'],
     'admin/projects' => ['Admin', 'galery'],
@@ -31,7 +32,7 @@ return array(
     'admin/comments/delete/([0-9]{1,})/?' => ['Admin', 'deleteComment'],
     'admin/redact-service' => ['Admin', 'editServices'],
     'admin/save_services' => ['Admin', 'save_services'],
-    'admin/redact-price'=>['Admin','redact_price'],
+    'admin/redact-price' => ['Admin', 'redact_price'],
     'admin/logout' => ['Admin', 'logout'],
     'login' => ['Admin', 'login'],
     'send_mail' => ['Mail', 'sendMail']

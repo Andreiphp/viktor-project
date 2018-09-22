@@ -1,16 +1,20 @@
 <?php include_once '/templates/layout/header2.php'; ?>
-<div class="bread_cramps">
-    <div class="container">
-        <ul class="cramps_list">
-            <li><a href="/" title="главная">Главная</a></li>
-            <li class=""><a class="" href="/portfolio/" title="Проекты">Проекты</a></li>
-            <li class="cramps_list_last"><span style="color: #FFC000" class="active"
-                                               title=<?php echo $single_project[0][0]['title'] ?>><?php echo $single_project[0][0]['title'] ?></span>
-            </li>
-        </ul>
-    </div>
-</div>
 
+<section class="main-block2">
+    <div class="bac_overlay"></div>
+    <div class="bread_cramps">
+        <div class="container">
+            <h1 class="bread_cramps_about">Контакты</h1>
+            <ul class="cramps_list">
+                <li><a href="/" title="главная">Главная</a></li>
+                <li><a title="главная" href="portfolio/">Портфолио</a></li>
+                <li class="cramps_list_last"><span style="color: #FFC000" class="active"
+                                                   title=<?php echo $single_project[0][0]['title'] ?>><?php echo $single_project[0][0]['title'] ?></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 <div class="single_pr_content mr_top">
     <div class="container">
         <div class="page-header">
