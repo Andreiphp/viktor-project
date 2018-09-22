@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <base href="http://viktor">
+<!--    <base href="http://viktor">-->
     <meta name="keywords" content="<?php echo $meta_key ?>">
     <meta name="description" content="<?php echo $meta_desc ?>">
     <title>Ваш уютный дом</title>

@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db7dda3d-45d8-4f33-aee8-d58cc7ca384e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/img/comments/123.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/comments/27667.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/comments/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/comments/ffff.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/comments/startup-developer-362x320.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/js/md5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/js/menuLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/CommentModels.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/CommentModels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/counter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/mainSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mainSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/portfolio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting/routers.php" beforeDir="false" afterPath="$PROJECT_DIR$/setting/routers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/header2.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/header2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/single_project.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single_project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../viktor/git/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../viktor/git/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../viktor/git/dist/js/mainSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../viktor/git/dist/js/mainSlider.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +31,8 @@
       <file leaf-file-name="mainSlider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/js/mainSlider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="288">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -87,7 +63,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../viktor/git" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -185,7 +161,7 @@
     <property name="SearchEverywhereHistoryKey" value="medi&#9;null&#9;null&#10;.choose&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testHR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -260,6 +236,7 @@
       <workItem from="1537366584323" duration="600000" />
       <workItem from="1537467515268" duration="626000" />
       <workItem from="1537634259717" duration="102000" />
+      <workItem from="1537634991323" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1524831000822</created>
@@ -279,13 +256,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503829000" />
+    <option name="totallyTimeSpent" value="503845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1363" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1788181" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18112049" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -626,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/js/mainSlider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="288">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
