@@ -4275,11 +4275,12 @@ body {
     line-height: 1.65;
     overflow-x: hidden;
     opacity: 1;
-    font-size: 14px;
+    font-size: 20px;
     color: #fefefe;
     /*font-family: "Montserrat", sans-serif;*/
     font-family: 'Raleway', sans-serif;
-    background-color: #fefefe;
+    background-color: darkred;
+    font-size: 33px;
 }
 
 .loaded {
