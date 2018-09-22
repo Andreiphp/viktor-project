@@ -4275,12 +4275,11 @@ body {
     line-height: 1.65;
     overflow-x: hidden;
     opacity: 1;
-    font-size: 20px;
+    font-size: 14px;
     color: #fefefe;
     /*font-family: "Montserrat", sans-serif;*/
     font-family: 'Raleway', sans-serif;
-    background-color: darkred;
-    font-size: 33px;
+    background: white;
 }
 
 .loaded {
@@ -7742,7 +7741,7 @@ cite {
     }
 
     .logo-box {
-       display: none;
+        display: none;
     }
 
     .contact_info {
@@ -8173,16 +8172,19 @@ cite {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-    .top-left{
+    .top-left {
         width: 100%;
     }
-    .top-left ul{
+
+    .top-left ul {
         display: flex;
         justify-content: space-evenly;
     }
-    .top-left ul li{
+
+    .top-left ul li {
         margin-right: 5px;
     }
+
     .form_group .form_wrapper .input_right {
         /* margin-top: 3px; */
         width: 100%;
@@ -8616,8 +8618,6 @@ cite {
         padding: 0px 0;
     }
 
-
-
     .main-comment .input_left .form-group {
         width: 100%;
     }
@@ -8666,10 +8666,11 @@ cite {
         flex-direction: column;
     }
 
-    .header_top_fix .nav_bar_nav li{
+    .header_top_fix .nav_bar_nav li {
         padding: 0;
     }
-    .nav_bar_nav li{
+
+    .nav_bar_nav li {
         padding: 0;
     }
 
