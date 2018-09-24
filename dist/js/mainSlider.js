@@ -73,7 +73,6 @@ class Slide {
         }).then(() => {
             this.btnDisabled(true);
             let fr = this.content[0].join(',').replace(/,/g, '');
-            console.log(fr);
             this.projectBox.innerHTML = fr;
             let Time;
             let cnt = 0;
@@ -138,7 +137,7 @@ class Slide {
                     count = (count <= 0) ? self.content.length - 1 : --count;
 
                     let fr = self.content[count].join(',').replace(/,/g, '');
-                    ;
+
                     self.projectBox.innerHTML = fr;
                     let r = document.querySelectorAll('.progect_box');
                     Time = setInterval(() => {

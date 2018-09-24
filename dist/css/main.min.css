@@ -5157,7 +5157,7 @@ ul {
 }
 
 .count_project .num_project {
-    color: #ffc000;
+    color: #ff9f14;
     font-size: 44px;
     font-weight: 700;
     position: relative;
@@ -5183,7 +5183,7 @@ ul {
 }
 
 .see_all_project a {
-    color: #ffc000;
+    color: #ff9f14;
     padding: 8px 12px;
     font-size: 16px;
     line-height: 1.25;
@@ -5293,11 +5293,11 @@ ul {
     bottom: 0;
     left: 0;
     width: 100px;
-    background: #ffc000;
+    background: #ff9f14;
 }
 
 .obout_himself .our_yellow {
-    color: #ffc000;
+    color: #ff9f14;
 }
 
 .btn_about {
@@ -5326,7 +5326,7 @@ ul {
     content: "\f178";
     width: 44px;
     height: 44px;
-    background: #ffc000;
+    background: #ff9f14;
     line-height: 44px;
     top: -1px;
     right: -1px;
@@ -7489,7 +7489,7 @@ cite {
 .footer .ft_adress .ft_adress_street:before, .footer .ft_adress .ft_adress_mail:before, .footer .ft_adress .ft_adress_phone:before {
     position: absolute;
     font-family: FontAwesome;
-    color: #ffc000;
+    color: #ff9f14;
     top: 3px;
     left: -30px;
 }
@@ -7620,7 +7620,7 @@ cite {
 .copyright-text a {
     display: block;
     margin-left: 10px;
-    color: #f0ac13;
+    color: #ff9f14;
 
 }
 
