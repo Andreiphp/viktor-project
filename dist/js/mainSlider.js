@@ -137,7 +137,7 @@ class Slide {
                     count = (count <= 0) ? self.content.length - 1 : --count;
 
                     let fr = self.content[count].join(',').replace(/,/g, '');
-                    ;
+
                     self.projectBox.innerHTML = fr;
                     let r = document.querySelectorAll('.progect_box');
                     Time = setInterval(() => {
