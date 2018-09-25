@@ -18,31 +18,50 @@ class Slide {
     }
 
     getCategorProjects() {
-        let self = this;
         this.catBox.addEventListener('click', function (event) {
             switch (event.target.id) {
                 case 'all':
-                    self.content.splice(0, self.content.length);
-                    self.getAllProgects('main/slide');
+                    this.deleteClass();
+                    setTimeout(() => {
+                        this.content.splice(0, this.content.length);
+                        this.getAllProgects('main/slide');
+                    }, 500);
                     break;
                 case 'kv':
-                    self.content.splice(0, self.content.length);
-                    self.getAllProgects('main/slide?param=1');
+                    this.deleteClass();
+                    setTimeout(() => {
+                        this.content.splice(0, this.content.length);
+                        this.getAllProgects('main/slide?param=1');
+                    }, 500);
+
                     break;
                 case 'loggias':
-                    self.content.splice(0, self.content.length);
-                    self.getAllProgects('main/slide?param=2');
+                    this.deleteClass();
+                    setTimeout(() => {
+                        this.content.splice(0, this.content.length);
+                        this.getAllProgects('main/slide?param=2');
+                    }, 500);
+
                     break;
                 case 'cottage':
-                    self.content.splice(0, self.content.length);
-                    self.getAllProgects('main/slide?param=3');
+                    this.deleteClass();
+                    setTimeout(() => {
+                        this.content.splice(0, this.content.length);
+                        this.getAllProgects('main/slide?param=3');
+                    }, 500);
+
                     break;
                 case 'bathroom':
-                    self.content.splice(0, self.content.length);
-                    self.getAllProgects('main/slide?param=4');
+                    this.deleteClass();
+                    setTimeout(() => {
+                        this.content.splice(0, this.content.length);
+                        this.getAllProgects('main/slide?param=4');
+                    }, 500);
+                    this.content.splice(0, this.content.length);
+                    this.getAllProgects('main/slide?param=4');
                     break;
             }
-        })
+        }.bind(this));
     }
 
 
@@ -56,13 +75,9 @@ class Slide {
             } else {
                 let arr = [];
                 for (let i = 0; i < result.length; i++) {
-                    arr.push("<div class='progect_box_wrapper'>" +
-                        "<div class='progect_box'>" +
-                        "<img alt='Проект - название : " + result[i]['title'] + "' src='../dist/img/projects/" + result[i]['img'] + "'>" +
-                        "<div class='project_box_hover'>" +
-                        "<span class='our_project_title'>" +
-                        "<a href='/portfolio/projects/" + result[i]['id'] + "' title='просмотреть проект: " + result[i]['title'] + "'>" + result[i]['title'] + "</a></span>" +
-                        "</div></div></div>");
+                    arr.push(
+                        this.template(result[i]['title'], result[i]['img'], result[i]['id'])
+                    );
                 }
 
                 while (arr.length) {
@@ -71,11 +86,11 @@ class Slide {
             }
 
         }).then(() => {
+            let Time;
+            let cnt = 0;
             this.btnDisabled(true);
             let fr = this.content[0].join(',').replace(/,/g, '');
             this.projectBox.innerHTML = fr;
-            let Time;
-            let cnt = 0;
             let r = document.querySelectorAll('.progect_box');
             Time = setInterval(() => {
                 if (cnt > r.length - 1) {
@@ -87,73 +102,43 @@ class Slide {
                 }
             }, 200);
         }).catch(error => {
-            let span = document.createElement('span');
-            span.textContent = 'Здесь пока нет проектов';
-            span.classList.add('error_span');
-            span.style.color = 'red';
-            while (this.projectBox.firstChild) {
-                this.projectBox.firstChild.remove();
-            }
-            this.projectBox.appendChild(span);
-            this.btnDisabled();
+            this.errorMess();
         })
     }
 
+    changeTemplate(count, cnt) {
+        let fr = this.content[count].join(',').replace(/,/g, '');
+        this.projectBox.innerHTML = fr;
+        let r = document.querySelectorAll('.progect_box');
+        this.clearInterval(cnt, r);
+    }
+
     w() {
-        let self = this;
         let count = 0;
         let cnt = 0;
-        let Time;
         document.getElementById('btn_slider').addEventListener('click', function (event) {
             if (event.target.className === 'next') {
-                let timeout = self.timeOut();
-                self.deleteClass();
+                let timeout = this.timeOut();
+                this.deleteClass();
                 setTimeout(() => {
-                    self.btnDisabled();
-                    count = (count >= self.content.length - 1) ? 0 : ++count;
-                    let fr = self.content[count].join(',').replace(/,/g, '');
-                    self.projectBox.innerHTML = fr;
-                    let r = document.querySelectorAll('.progect_box');
-                    Time = setInterval(() => {
-                        if (cnt > r.length - 1) {
-                            cnt = 0;
-                            clearInterval(Time);
-                            self.btnDisabled(true);
-                        } else {
-                            r[cnt].classList.add('werty');
-                            cnt++;
-                        }
-                    }, 100);
+                    this.btnDisabled();
+                    count = (count >= this.content.length - 1) ? 0 : ++count;
+                    this.changeTemplate(count, cnt);
 
                 }, timeout + 100);
             }
 
             if (event.target.className === 'back') {
-
-                let timeout = self.timeOut();
-                self.deleteClass();
+                let timeout = this.timeOut();
+                this.deleteClass();
                 setTimeout(() => {
-                    self.btnDisabled();
-                    count = (count <= 0) ? self.content.length - 1 : --count;
-
-                    let fr = self.content[count].join(',').replace(/,/g, '');
-
-                    self.projectBox.innerHTML = fr;
-                    let r = document.querySelectorAll('.progect_box');
-                    Time = setInterval(() => {
-                        if (cnt > r.length - 1) {
-                            cnt = 0;
-                            clearInterval(Time);
-                            self.btnDisabled(true);
-                        } else {
-                            r[cnt].classList.add('werty');
-                            cnt++;
-                        }
-                    }, 100);
+                    this.btnDisabled();
+                    count = (count <= 0) ? this.content.length - 1 : --count;
+                    this.changeTemplate(count, cnt);
 
                 }, timeout + 100);
             }
-        })
+        }.bind(this));
     }
 
     btnDisabled(bool) {
@@ -218,6 +203,44 @@ class Slide {
             };
             xhr.send(params);
         });
+    }
+
+    clearInterval(cnt, r) {
+
+        let Time = setInterval(() => {
+            if (cnt > r.length - 1) {
+                cnt = 0;
+                clearInterval(Time);
+                this.btnDisabled(true);
+            } else {
+                r[cnt].classList.add('werty');
+                cnt++;
+            }
+        }, 100);
+    }
+
+    template(title, img, id) {
+        let str = "<div class='progect_box_wrapper'>" +
+            "<div class='progect_box'>" +
+            "<img alt='Проект - название : " + title + "' src='../dist/img/projects/" + img + "'>" +
+            "<div class='project_box_hover'>" +
+            "<span class='our_project_title'>" +
+            "<a href='/portfolio/projects/" + id + "' title='просмотреть проект: " + title + "'>" + title + "</a></span>" +
+            "</div></div></div>";
+
+        return str;
+    }
+
+    errorMess() {
+        let span = document.createElement('span');
+        span.textContent = 'Здесь пока нет проектов';
+        span.classList.add('error_span');
+        span.style.color = 'red';
+        while (this.projectBox.firstChild) {
+            this.projectBox.firstChild.remove();
+        }
+        this.projectBox.appendChild(span);
+        this.btnDisabled();
     }
 
 }
