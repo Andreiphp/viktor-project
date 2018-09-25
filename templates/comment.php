@@ -6,7 +6,7 @@
             <h1 class="bread_cramps_about">Отзывы</h1>
             <ul class="cramps_list">
                 <li><a href="/" title="главная">Главная</a></li>
-                <li><a title="главная" href="javascript:void(0);">Отзывы</a></li>
+                <li><a title="Отзывы" href="javascript:void(0);">Отзывы</a></li>
             </ul>
         </div>
     </div>

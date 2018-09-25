@@ -198,14 +198,14 @@ function postRequest1(url, params) {
 
 function template(id, img, title) {
     let tmp = "<div style='opacity: 1!important;' class='tab__content_item'><a href='' title=" + title + "><img src='/dist/img/projects/" + img + "'></a>"
-        + "<span class='tab_title_hover'><a href='/portfolio/projects/" + id + "'>" + title + "<i class='fa fa-eye'></i></a></span></div>";
+        + "<span class='tab_title_hover'><a href='/portfolio/projects/" + id + "'>" + title + "<i class='fa fa-arrow-circle-o-right'></i></a></span></div>";
     return tmp;
 }
 
-function fixHeader(header) {
-    if (window.scrollY > 10) {
-        header.classList.add('header_top_fix');
-    } else {
-        header.classList.remove('header_top_fix');
-    }
-}
+// function fixHeader(header) {
+//     if (window.scrollY > 10) {
+//         header.classList.add('header_top_fix');
+//     } else {
+//         header.classList.remove('header_top_fix');
+//     }
+// }

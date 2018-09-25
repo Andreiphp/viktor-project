@@ -7,7 +7,7 @@
             <h1 class="bread_cramps_about">Контакты</h1>
             <ul class="cramps_list">
                 <li><a href="/" title="главная">Главная</a></li>
-                <li><a title="главная" href="portfolio/">Портфолио</a></li>
+                <li><a title="Портфолио" href="/portfolio/">Портфолио</a></li>
                 <li class="cramps_list_last"><span style="color: #FFC000" class="active"
                                                    title=<?php echo $single_project[0][0]['title'] ?>><?php echo $single_project[0][0]['title'] ?></span>
                 </li>
@@ -30,7 +30,7 @@
              data-allowfullscreen="native"
              data-nav="thumbs">
             <?php foreach ($single_project[1] as $item => $value) { ?>
-                <img alt="Фото ремонта" src="/dist/img/projects/<?php echo $value['img'] ?>">
+                <img alt="Фото ремонта"  src="/dist/img/projects/<?php echo $value['img'] ?>">
             <?php } ?>
         </div>
         <div class="progect_info">

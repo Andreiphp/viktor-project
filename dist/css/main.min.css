@@ -4360,7 +4360,8 @@ ul {
 }
 
 #fixed_header {
-    transition: 0.5s;
+
+
 
 }
 
@@ -4371,8 +4372,12 @@ ul {
     background: #ffffff;
     width: 100%;
     box-shadow: 0px 2px 4px #222222;
+    transform: translateY(-100px);
 }
-
+.header_top_trans{
+    transition: 0.5s;
+    transform: translateY(0px);
+}
 .header_top_fix .logo-box {
     height: 100px;
     padding: 0;
@@ -6544,22 +6549,23 @@ cite {
     -ms-flex: 1;
     flex: 1;
     padding: 10px 0;
-    color: #b3b3b3;
     text-align: center;
     -webkit-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #222222;
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+    background: #222;
+    color: #fff;
 }
 
 .c-tabs-nav__link.is_active {
     color: #ffc000;
-    border: 1px solid #d3d3d3;
-    border-bottom: none;
+    border: 1px solid #0e0d0d;
+    background: #ffffff;
 }
 
 .c-tabs-nav__link.is_active:last-child {
@@ -6642,7 +6648,6 @@ cite {
     width: 100%;
     height: 60px;
     background: #2e3841;
-    opacity: 0.5;
     text-align: center;
     padding: 17px 0;
     -webkit-transition: bottom 1s;
@@ -6672,16 +6677,27 @@ cite {
 }
 
 .load_more {
-    /*display: block;*/
-    width: 186px;
-    margin: 0 auto;
-    outline: none;
-    background: #fefefe;
-    color: #ffc000;
-    padding: 8px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    margin-top: 15px;
+    transition: 0.5s ease 0s;
+    text-align: inherit;
+    margin: 0px 15px;
+    padding: 18px 40px;
+    letter-spacing: 0px;
+    font-size: 16px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    background: #ff9f14;
+    border: 2px solid #ff9f14;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    background: #222222;
+    color: #ff9f14;
+}
+
+.load_more:hover {
+    color: #222222;
+    background: #e6e6e6;
 }
 
 .page-header {
@@ -7714,6 +7730,63 @@ cite {
     font-size: 20px;
 }
 
+.error-section {
+    position: relative;
+    text-align: center;
+    padding: 190px 0px 80px;
+}
+
+.error-image {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.image {
+    position: relative;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.image img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.error-section h2 {
+    position: relative;
+    font-size: 60px;
+    line-height: 1.2em;
+    color: #ff9f14;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.error-section .text {
+    font-size: 18px;
+    color: #777777;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: 50px;
+}
+
+.error-section a {
+    font-weight: 700;
+    padding: 15px 55px;
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 14px 30px;
+    line-height: 20px;
+    font-weight: 700;
+    background: #222222;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 
@@ -7735,6 +7808,11 @@ cite {
 }
 
 @media only screen and (max-width: 1040px) {
+    .top-left ul li {
+        transition: 0.5s;
+        margin-right: 20px;
+    }
+
     .main-box {
         align-items: center;
         flex-direction: column;
@@ -7783,6 +7861,14 @@ cite {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .last_project_list_bottom {
+        padding-left: 8px;
+    }
+
+    .last_project_list_bottom h3 a {
+        font-size: 15px;
+    }
+
     .our_progect_content .progect_box_wrapper {
         width: calc(100% / 2 - 27px);
     }
@@ -8027,7 +8113,7 @@ cite {
     }
 
     .who_we_are_content .about_left_content, .who_we_are_content .about_right_content {
-        width: 80%;
+        width: 100%;
     }
 
     .who_we_are_content .about_left_content {
@@ -8150,6 +8236,23 @@ cite {
 }
 
 @media only screen and (max-width: 840px) {
+    .our_time_about .our_time .our_time_content {
+        flex-direction: column;
+    }
+
+    .our_time_about .our_time .our_time_content > div p {
+        text-align: center;
+    }
+
+    .contact-link {
+        margin-top: 50px;
+    }
+
+    .wrapper-ht {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
     .nav_bar_nav li {
         margin-left: 15px;
     }
@@ -8172,6 +8275,15 @@ cite {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+    .bread_cramps .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cramps_list {
+        margin-top: 40px;
+    }
+
     .top-left {
         width: 100%;
     }
@@ -8296,7 +8408,7 @@ cite {
     }
 
     .services_list {
-        width: calc(75% - 15px);
+        width: calc(100% - 15px);
         margin: 20px auto;
     }
 
@@ -8420,6 +8532,9 @@ cite {
 }
 
 @media only screen and (max-width: 570px) {
+    .error-section h2{
+        font-size: 40px;
+    }
     .show_form {
         font-size: 13px;
     }
@@ -8502,7 +8617,7 @@ cite {
 
     .last_project_container .last_project_list {
         width: calc(100% / 1 - 10px);
-        margin-bottom: 10px;
+        margin-bottom: 26px;
         margin-left: 10px;
     }
 
@@ -8643,6 +8758,7 @@ cite {
 
     .main-box {
         flex-direction: row;
+        position: relative;
     }
 
     .nav-bar-header {
@@ -8654,10 +8770,11 @@ cite {
     }
 
     .nav-bar-collapse {
-        display: block;
+
+        display: none;
         position: absolute;
         z-index: 10;
-        left: 121px;
+        right: 0;
         width: 70%;
         transition: 0.4s;
     }

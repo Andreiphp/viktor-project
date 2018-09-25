@@ -73,7 +73,6 @@ class Slide {
         }).then(() => {
             this.btnDisabled(true);
             let fr = this.content[0].join(',').replace(/,/g, '');
-            console.log(fr);
             this.projectBox.innerHTML = fr;
             let Time;
             let cnt = 0;

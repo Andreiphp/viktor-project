@@ -116,9 +116,6 @@ $(function () {
 
 let header = document.getElementById('fixed_header');
 
-window.onscroll = function () {
-    fixHeader(header);
-};
 
 showHeadMenu();
 
