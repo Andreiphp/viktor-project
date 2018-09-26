@@ -100,12 +100,12 @@
                 </div>
                 <div class="count_project">
                     <span class="num_project">140</span><span class="pr">проектов</span>
-                    <span class="see_all_project"><a href="portfolio/">Перейти <i class="fa fa-arrow-right "
+                    <span class="see_all_project"><a title="Перейти в проекты" href="portfolio/">Перейти <i class="fa fa-arrow-right "
                                                                          aria-hidden="true"></i></a> </span>
                 </div>
             </div>
             <div class="we_do_right">
-                <img alt="фото о нашей работе" src="../dist/img/<?php echo $what_we_do[0]['img']; ?>">
+                <img alt="фото о нашей работе"  src="../dist/img/<?php echo $what_we_do[0]['img']; ?>">
             </div>
         </div>
     </div>

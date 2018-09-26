@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:image" content="path/to/image.jpg">
 
-    <!--    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">-->
-    <!--    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
-    <!--    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
-    <!--    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+    <link rel="shortcut icon" href="/dist/img/favicon/favicons.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/dist/img/favicon/favicons.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/dist/img/favicon/favicons.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="/dist/img/favicon/favicons.ico">
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000">
     <!-- Windows Phone -->
@@ -26,6 +26,39 @@
     <script defer src="/dist/js/wow.min.js"></script>
 </head>
 <body>
+<div id="fixed_header" class="header-lower header_top_fix">
+    <div class="container">
+        <div class="main-box">
+            <div class="logo-box">
+                <a class="logo-box-link" href="/">
+
+                </a>
+            </div>
+            <div class="nav-outer">
+                <nav class="main-menu">
+                    <div class="nav-bar-header">
+                        <button type="button" class="navbar-toggle">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="nav-bar-collapse">
+                        <ul class="nav_bar_nav">
+                            <li class="current"><a href="/">Главная</a></li>
+                            <li><a title="О нас" href="/about/">О нас</a></li>
+                            <li><a title="Услуги" href="/services/">Услуги</a></li>
+                            <li><a title="Цены" href="/price/price.txt">Цены</a></li>
+                            <li><a title="Проекты" href="/portfolio/">Портфолио</a></li>
+                            <li><a title="Отзывы" href="/comment/">Отзывы</a></li>
+                            <li><a title="Контакты" href="/contacts/">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 <div>
     <header>
         <div class="header-top">
@@ -39,23 +72,23 @@
                     </div>
                     <div class="top-right">
                         <ul class="flex">
-                            <li class="social_foot facebooc"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li class="social_foot facebooc"><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            <li class="social_foot facebooc"><a title="Фейсбук" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                            <li class="social_foot facebooc"><a title="В контакте" href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
                             </li>
-                            <li class="social_foot twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <li class="social_foot twitter"><a title="Твиттер" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             </li>
-                            <li class="social_foot googl"><a href="#"><i class="fa fa-google-plus-official"
-                                                                         aria-hidden="true"></i></a></li>
-                            <li class="social_foot skype"><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                            <li class="social_foot googl"><a title="Гугл" href="#"><i class="fa fa-google-plus-official"
+                                                                                      aria-hidden="true"></i></a></li>
+                            <li class="social_foot skype"><a title="Скайп" href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
                             </li>
-                            <li class="social_foot uyotube"><a href="#"><i class="fa fa-youtube-play"
-                                                                           aria-hidden="true"></i></a></li>
+                            <li class="social_foot uyotube"><a title="Ютуб" href="#"><i class="fa fa-youtube-play"
+                                                                                        aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="fixed_header" class="header-lower">
+        <div  class="header-lower">
             <div class="container">
                 <div class="main-box">
                     <div class="logo-box">
@@ -75,12 +108,12 @@
                             <div class="nav-bar-collapse">
                                 <ul class="nav_bar_nav">
                                     <li class="current"><a href="/">Главная</a></li>
-                                    <li><a href="/about/">О нас</a></li>
-                                    <li><a href="/services/">Услуги</a></li>
-                                    <li><a href="/price/price.txt">Цены</a></li>
-                                    <li><a href="/portfolio/">Портфолио</a></li>
-                                    <li><a href="/comment/">Отзывы</a></li>
-                                    <li><a href="/contacts/">Контакты</a></li>
+                                    <li><a title="О нас" href="/about/">О нас</a></li>
+                                    <li><a title="Услуги" href="/services/">Услуги</a></li>
+                                    <li><a title="Цены" href="/price/price.txt">Цены</a></li>
+                                    <li><a title="Проекты" href="/portfolio/">Портфолио</a></li>
+                                    <li><a title="Отзывы" href="/comment/">Отзывы</a></li>
+                                    <li><a title="Контакты" href="/contacts/">Контакты</a></li>
                                 </ul>
                             </div>
                         </nav>

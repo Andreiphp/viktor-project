@@ -8,7 +8,7 @@
             <h1 class="bread_cramps_about">Портфолио</h1>
             <ul class="cramps_list">
                 <li><a href="/" title="главная">Главная</a></li>
-                <li><a title="главная" href="javascript:void(0);">Портфолио</a></li>
+                <li><a title="Портфолио" href="javascript:void(0);">Портфолио</a></li>
             </ul>
         </div>
     </div>
@@ -62,7 +62,9 @@
             </div>
         </div>
     </div>
-    <div style="width: 186px; margin: 0 auto"> <button class="load_more mr_top" data-load='flat' id="load_more" type="button">Показать еще</button></div>
+    <div style="width: 268px;margin: 0 auto;text-align: center;">
+        <button class="load_more mr_top" data-load='flat' id="load_more" type="button">Показать еще</button>
+    </div>
 </div>
 </div>
 <script>

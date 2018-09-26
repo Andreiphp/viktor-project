@@ -17,6 +17,9 @@ class Error
 
     public function error()
     {
-        echo '<h1>Error</h1>';
+        $meta_key = 'ремонт, ремотн в минске, ремонт в квартире, фасады, санузлы';
+        $meta_desc = 'Ваш Уютный Дом - страница не существует';
+
+        require_once(ROOT . '/templates/Error.php');
     }
 }

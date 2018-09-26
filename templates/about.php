@@ -7,7 +7,7 @@
             <h1 class="bread_cramps_about">О нас</h1>
             <ul class="cramps_list">
                 <li><a href="/" title="главная">Главная</a></li>
-                <li><a title="главная" href="javascript:void(0);">О нас</a></li>
+                <li><a title="О нас" href="javascript:void(0);">О нас</a></li>
             </ul>
         </div>
     </div>
@@ -75,7 +75,7 @@
                     <p>Разумный ценовой диапазон</p>
                 </div>
 
-                <div class="contact-link"><a href="/contacts">Контакты</a></div>
+                <div class="contact-link"><a title="Контакты" href="/contacts">Контакты</a></div>
             </div>
         </div>
     </div>
@@ -131,14 +131,14 @@
                 <?php foreach ($lastProjects as $project) { ?>
                     <div class="last_project_list">
                         <div class="last_project_list_wr">
-                            <img src="/dist/img/projects/<?php echo $project['img']; ?>">
+                            <img alt="<?php echo $project['title'] ?>" src="/dist/img/projects/<?php echo $project['img']; ?>">
                         </div>
                         <div class="last_project_list_bottom">
                             <h3>
-                                <a href="/portfolio/projects/<?php echo $project['id'] ?>"><?php echo $project['title'] ?></a>
+                                <a  title="<?php echo $project['title'] ?>" href="/portfolio/projects/<?php echo $project['id'] ?>"><?php echo $project['title'] ?></a>
                             </h3>
                             <span class="view-projects">
-                                   <a href="/portfolio/projects/<?php echo $project['id'] ?>"><i
+                                   <a title="<?php echo $project['title'] ?>" href="/portfolio/projects/<?php echo $project['id'] ?>"><i
                                                class=" fa fa-angle-right"></i></a>
 
                             </span>

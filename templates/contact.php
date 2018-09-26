@@ -6,7 +6,7 @@
             <h1 class="bread_cramps_about">Контакты</h1>
             <ul class="cramps_list">
                 <li><a href="/" title="главная">Главная</a></li>
-                <li><a title="главная" href="javascript:void(0);">Контакты</a></li>
+                <li><a title="Контакты" href="javascript:void(0);">Контакты</a></li>
             </ul>
         </div>
     </div>
@@ -68,6 +68,10 @@
                     <li>
                         <i class="fa fa-phone"></i>
                         <span>   + 375 29 777 80 96</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>  + 375 44 784 32 90</span>
                     </li>
                 </ul>
             </div>

@@ -16,20 +16,28 @@
     let f = document.querySelector('.nav-bar-collapse');
     let m = document.querySelector('.main-menu');
     let g = false;
+
     m.addEventListener('click', () => {
 
         g = !g;
 
-        if (g) {
-            f.style.left = '100%'; f.style.opacity = '0';
-
+        if (!g) {
+            f.style.display = 'none';
         } else {
-            f.style.opacity = '1';
-            f.style.left = '121px';
+            f.style.display = 'block';
         }
 
         console.log(g);
-    })
+    });
 
+    function chengeResize() {
+        window.onresize = function () {
+            if (document.documentElement.clientWidth >= 704 && f.style.display === 'none') {
+                f.style.display = '';
+            }
+        }.bind(this);
+    }
+
+    chengeResize();
 
 })();
