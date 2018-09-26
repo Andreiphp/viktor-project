@@ -11,7 +11,7 @@
                     <label>Назание проекта<input type="text" name="name" required></label>
                 </div>
                 <div class="form-group">
-                    <label><input type="file" name="image" required></label>
+                    <label><input type="file" name="image" ></label>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="selectError">Выберите категорию</label>

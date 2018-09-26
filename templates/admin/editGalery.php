@@ -25,7 +25,7 @@
             <div class="form-group">
                 <form action="/admin/upload/images/<?php echo $id[1]; ?>" enctype="multipart/form-data" method="post">
                     <label Выберите файл>
-                        <input type="file" name="image" required><br>
+                        <input type="file" name="image" ><br>
                         <textarea id="editor1" name="txt" cols="100"
                                   rows="20"><?php echo $discription[0]['discription'] ?></textarea><br>
                     </label>
